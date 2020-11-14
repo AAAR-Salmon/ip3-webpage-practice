@@ -4,6 +4,12 @@ body {
 	background-color: #ffc;
 }
 
+h1 {
+	font-family: 'Yu Mincho Demibold', serif;
+
+	text-align: center;
+}
+
 #wrapper, #question, #question-ch, #question-tf {
 	max-width: 800px;
 	margin: 0 auto;
