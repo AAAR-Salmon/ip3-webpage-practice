@@ -1,3 +1,20 @@
+#answer {
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+#answer thead th:nth-child(1) {
+	width: 2.5em;
+}
+
+#answer thead th:nth-child(3), #answer thead th:nth-child(4) {
+	width: 7em;
+}
+
+#answer th, #answer td {
+	border: 1px solid #ccc;
+}
+
 .youranswer[data-iscorrect='false'] {
 	color: #f00;
 }
