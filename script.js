@@ -1,6 +1,10 @@
 let answer = {};
 let radios = document.querySelectorAll('.radio');
 
+function clearAnswer() {
+	answer = {};
+}
+
 window.addEventListener('load', () => {
 	if (localStorage.webpagePractice != void(0)) {
 		answer = JSON.parse(localStorage.webpagePractice);
@@ -23,6 +27,12 @@ window.addEventListener('load', () => {
 			});
 			v.dataset.selected = true;
 			answer[v.dataset.question] = v.dataset.value;
+		}, false);
+	});
+
+	document.querySelectorAll('.link-button').forEach(v => {
+		v.addEventListener('click', () => {
+			location.href = v.dataset.href;
 		}, false);
 	});
 }, false);
