@@ -5,13 +5,10 @@
 	"main": "index.js",
 	"dependencies": {
 		"csscomb": "^4.3.0",
-		"node-sass": "^5.0.0"
+		"sass": "^1.29.0"
 	},
 	"devDependencies": {},
-	"scripts": {
-		"csscomb": "csscomb",
-		"sass": "node-sass"
-	},
+	"scripts": {},
 	"author": "",
 	"license": "ISC"
 }

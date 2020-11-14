@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  min-height: 80vh;
+}
+
+#question {
+  display: grid;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffc;
+  flex-grow: 1;
+  grid-template-columns: 1fr 35px 35px;
+}
+
+.radio {
+  font-family: Consolas, sans-serif;
+  font-size: 25px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  border: #eee 2px outset;
+  border-radius: 10px;
+  background-color: #eee;
+}
+.radio:hover {
+  background-color: #ccc;
+}
+.radio[data-selected=true] {
+  border: #dfd 2px inset;
+  background-color: #dfd;
+}
+
+#next {
+  grid-column: 2/4;
+}
