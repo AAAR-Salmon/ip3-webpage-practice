@@ -19,7 +19,9 @@ window.addEventListener('load', () => {
 		console.log(i, v.dataset.question, v.dataset.value);
 		v.addEventListener('click', () => {
 			radios.forEach((w, j) => {
-				w.dataset.selected = false;
+				if (w.dataset.question === v.dataset.question) {
+					w.dataset.selected = false;
+				}
 			});
 			v.dataset.selected = true;
 			answer[v.dataset.question] = v.dataset.value;
