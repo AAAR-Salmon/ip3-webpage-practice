@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 		table.innerHTML += `<tr>
 			<td>${k}</td>
 			<td>${questions[k].sentence}</td>
-			<td>${answer[k] !== void(0) ? answer[k] : '-'}</td>
+			<td class="youranswer" data-iscorrect="${answer[k] === questions[k].answer}">${answer[k] !== void(0) ? answer[k] : '-'}</td>
 			<td>${questions[k].answer}</td>
 		</tr>`;
 	}
