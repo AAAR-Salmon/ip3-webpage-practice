@@ -4,10 +4,13 @@
 		<meta charset="utf-8">
 		<title>Webページ演習</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="shortcut icon" href="icon.png">
 		<script type="text/javascript" src="script.js" async></script>
 	</head>
 	<body>
-		<a href="#" onclick="localStorage.clear('webpagePractice'); answer = {};">回答状況をクリアする</a>
-		<a href="questions/part1.html">開始する</a>
+		<div id="wrapper">
+			<div id="clear" class="button" onclick="clearAnswer();">回答状況をクリアする</div>
+			<div class="link-button" data-href="questions/part1.html">開始する</div>
+		</div>
 	</body>
 </html>
