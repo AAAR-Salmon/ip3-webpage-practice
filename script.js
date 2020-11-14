@@ -10,13 +10,13 @@ window.addEventListener('load', () => {
 		answer = JSON.parse(localStorage.webpagePractice);
 	}
 
+	let radio;
 	for (var key in answer) {
 		if (answer.hasOwnProperty(key)) {
-			radios.forEach(v => {
-				if (v.dataset.question === key && v.dataset.value === answer[key]) {
-					v.dataset.selected = true;
-				}
-			});
+			radio = document.querySelector(`.radio[data-question='${key}'][data-value='${answer[key]}']`);
+			if (radio !== null) {
+				radio.dataset.selected = true;
+			}
 		}
 	}
 
