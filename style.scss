@@ -1,47 +1,85 @@
 body {
 	display: flex;
 
-	min-height: 80vh;
+	background-color: #ffc;
+}
+
+#wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+
+	background-color: #fff;
+
+	flex-grow: 1;
 }
 
 #question {
 	display: grid;
 
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
-
-	background-color: #ffc;
-
-	flex-grow: 1;
+	@extend #wrapper;
+	grid-column-gap: 5px;
+	grid-row-gap: 10px;
 	grid-template-columns: 1fr 35px 35px;
+
+	& p {
+		margin: 0;
+	}
+}
+
+#title {
+	grid-column: 1 / 4;
+}
+
+#answer {
+	text-align: center;
+}
+
+#next {
+	grid-column: 2 / 4;
+}
+
+.button {
+	display: block;
+
+	cursor: pointer;
+	text-align: center;
+
+	border: #fff 1px outset;
+	border-radius: 10px;
+
+	&:hover {
+		background-color: #ccc;
+	}
+
+	&:active, &[data-selected='true'] {
+		border: #dfd 1px outset;
+		background-color: #dfd;
+	}
 }
 
 .radio {
 	font-family: Consolas, sans-serif;
 	font-size: 25px;
 
-	display: block;
-
 	width: 30px;
 	height: 30px;
 
-	cursor: pointer;
-	text-align: center;
+	@extend .button;
 
-	border: #eee 2px outset;
-	border-radius: 10px;
-	background-color: #eee;
-
-	&:hover {
-		background-color: #ccc;
+	&[data-value='o'] {
+		color: #f00;
 	}
 
-	&[data-selected='true'] {
-		border: #dfd 2px inset;
-		background-color: #dfd;
+	&[data-value='x'] {
+		color: #00f;
 	}
 }
-#next {
-	grid-column: 2 / 4;
+
+.link-button {
+	@extend .button;
+}
+
+.nomarker-list {
+	list-style-type: none;
 }
