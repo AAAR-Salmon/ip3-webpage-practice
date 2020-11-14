@@ -1,76 +1,75 @@
 body {
-	display: flex;
-
-	background-color: #ffc;
+  display: flex;
+  background-color: #ffc;
 }
 
-#wrapper, #question, #question-tf {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
-
-	background-color: #fff;
-
-	flex-grow: 1;
+#wrapper, #question, #question-ch, #question-tf {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  flex-grow: 1;
 }
 
-#question, #question-tf {
-	display: grid;
-
-	grid-column-gap: 5px;
-	grid-row-gap: 10px;
-}
-#question p, #question-tf p {
-	margin: 0;
+#question p, #question-ch p, #question-tf p {
+  margin: 0;
 }
 
 #question-tf {
-	grid-template-columns: 1fr 35px 35px;
+  display: grid;
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 35px 35px;
+}
+
+#question-ch {
+  display: flex;
+  flex-direction: column;
 }
 
 #title {
-	grid-column: 1/4;
+  grid-column: 1/4;
 }
 
 #answer {
-	text-align: center;
+  text-align: center;
 }
 
 #next {
-	grid-column: 2/4;
+  grid-column: 2/4;
 }
 
 .button, .link-button, .radio {
-	display: block;
-
-	cursor: pointer;
-	text-align: center;
-
-	border: #fff 1px outset;
-	border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  border: #fff 1px outset;
+  border-radius: 10px;
 }
 .button:hover, .link-button:hover, .radio:hover {
-	background-color: #ccc;
+  background-color: #ccc;
 }
 .button:active, .link-button:active, .radio:active, .button[data-selected=true], [data-selected=true].link-button, [data-selected=true].radio {
-	border: #dfd 1px outset;
-	background-color: #dfd;
+  border: #dfd 1px outset;
+  background-color: #dfd;
 }
 
 .radio {
-	font-family: Consolas, sans-serif;
-	font-size: 25px;
-
-	width: 30px;
-	height: 30px;
+  height: 30px;
 }
 .radio[data-value=o] {
-	color: #f00;
+  width: 30px;
+  font-family: Consolas, sans-serif;
+  font-size: 25px;
+  color: #f00;
 }
 .radio[data-value=x] {
-	color: #00f;
+  width: 30px;
+  font-family: Consolas, sans-serif;
+  font-size: 25px;
+  color: #00f;
 }
 
 .nomarker-list {
-	list-style-type: none;
+  list-style-type: none;
 }

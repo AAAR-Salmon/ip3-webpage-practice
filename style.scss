@@ -15,11 +15,7 @@ body {
 }
 
 #question {
-	display: grid;
-
 	@extend #wrapper;
-	grid-column-gap: 5px;
-	grid-row-gap: 10px;
 
 	& p {
 		margin: 0;
@@ -27,8 +23,19 @@ body {
 }
 
 #question-tf {
+	display: grid;
+
 	@extend #question;
+	grid-column-gap: 5px;
+	grid-row-gap: 10px;
 	grid-template-columns: 1fr 35px 35px;
+}
+
+#question-ch {
+	display: flex;
+	flex-direction: column;
+
+	@extend #question;
 }
 
 #title {
@@ -62,21 +69,28 @@ body {
 	}
 }
 
-.radio {
+@mixin button-ox($color, $fontsize) {
 	font-family: Consolas, sans-serif;
-	font-size: 25px;
+	font-size: $fontsize;
 
-	width: 30px;
+	color: $color;
+}
+
+.radio {
 	height: 30px;
 
 	@extend .button;
 
 	&[data-value='o'] {
-		color: #f00;
+		width: 30px;
+
+		@include button-ox(#f00, 25px);
 	}
 
 	&[data-value='x'] {
-		color: #00f;
+		width: 30px;
+
+		@include button-ox(#00f, 25px);
 	}
 }
 
