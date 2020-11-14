@@ -1,5 +1,6 @@
 let answer = {};
 let radios = document.querySelectorAll('.radio');
+
 window.addEventListener('load', () => {
 	if (localStorage.webpagePractice != void(0)) {
 		answer = JSON.parse(localStorage.webpagePractice);
@@ -7,7 +8,7 @@ window.addEventListener('load', () => {
 
 	for (var key in answer) {
 		if (answer.hasOwnProperty(key)) {
-			radios.forEach((v, i) => {
+			radios.forEach(v => {
 				if (v.dataset.question === key && v.dataset.value === answer[key]) {
 					v.dataset.selected = true;
 				}
@@ -15,13 +16,10 @@ window.addEventListener('load', () => {
 		}
 	}
 
-	radios.forEach((v, i) => {
-		console.log(i, v.dataset.question, v.dataset.value);
+	radios.forEach(v => {
 		v.addEventListener('click', () => {
-			radios.forEach((w, j) => {
-				if (w.dataset.question === v.dataset.question) {
-					w.dataset.selected = false;
-				}
+			document.querySelectorAll(`.radio[data-question='${v.dataset.question}']`).forEach(w => {
+				w.dataset.selected = false;
 			});
 			v.dataset.selected = true;
 			answer[v.dataset.question] = v.dataset.value;
