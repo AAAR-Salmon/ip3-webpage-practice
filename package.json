@@ -1,0 +1,17 @@
+{
+	"name": "webpage-practice",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"csscomb": "^4.3.0",
+		"node-sass": "^5.0.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"csscomb": "csscomb",
+		"sass": "node-sass"
+	},
+	"author": "",
+	"license": "ISC"
+}
