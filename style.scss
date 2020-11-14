@@ -5,8 +5,9 @@ body {
 }
 
 h1 {
-	text-align: center;
 	font-family: 'Yu Mincho Demibold', serif;
+
+	text-align: center;
 }
 
 #wrapper {
@@ -33,7 +34,7 @@ h1 {
 	@extend #question;
 	grid-column-gap: 5px;
 	grid-row-gap: 10px;
-	grid-template-columns: 1fr 35px 35px;
+	grid-template-columns: 1fr 85px 85px;
 }
 
 #question-ch {
@@ -51,8 +52,12 @@ h1 {
 	text-align: center;
 }
 
+#prev {
+	grid-column: 2;
+}
+
 #next {
-	grid-column: 2 / 4;
+	grid-column: 3;
 }
 
 .button {
@@ -87,15 +92,24 @@ h1 {
 	@extend .button;
 
 	&[data-value='o'] {
-		width: 30px;
+		width: 80px;
 
 		@include button-ox(#f00, 25px);
 	}
 
 	&[data-value='x'] {
-		width: 30px;
+		width: 80px;
 
 		@include button-ox(#00f, 25px);
+	}
+}
+
+.flex-dir-row {
+	display: flex;
+	flex-direction: row;
+
+	& > div {
+		flex-grow: 1;
 	}
 }
 

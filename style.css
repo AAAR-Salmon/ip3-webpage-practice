@@ -29,7 +29,7 @@ h1 {
 
 	grid-column-gap: 5px;
 	grid-row-gap: 10px;
-	grid-template-columns: 1fr 35px 35px;
+	grid-template-columns: 1fr 85px 85px;
 }
 
 #question-ch {
@@ -45,8 +45,12 @@ h1 {
 	text-align: center;
 }
 
+#prev {
+	grid-column: 2;
+}
+
 #next {
-	grid-column: 2/4;
+	grid-column: 3;
 }
 
 .button, .link-button, .radio {
@@ -73,7 +77,7 @@ h1 {
 	font-family: Consolas, sans-serif;
 	font-size: 25px;
 
-	width: 30px;
+	width: 80px;
 
 	color: #f00;
 }
@@ -81,9 +85,17 @@ h1 {
 	font-family: Consolas, sans-serif;
 	font-size: 25px;
 
-	width: 30px;
+	width: 80px;
 
 	color: #00f;
+}
+
+.flex-dir-row {
+	display: flex;
+	flex-direction: row;
+}
+.flex-dir-row > div {
+	flex-grow: 1;
 }
 
 .nomarker-list {
