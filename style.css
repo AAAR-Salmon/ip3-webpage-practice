@@ -4,7 +4,7 @@ body {
 	background-color: #ffc;
 }
 
-#wrapper, #question {
+#wrapper, #question, #question-tf {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
@@ -14,15 +14,18 @@ body {
 	flex-grow: 1;
 }
 
-#question {
+#question, #question-tf {
 	display: grid;
 
 	grid-column-gap: 5px;
 	grid-row-gap: 10px;
-	grid-template-columns: 1fr 35px 35px;
 }
-#question p {
+#question p, #question-tf p {
 	margin: 0;
+}
+
+#question-tf {
+	grid-template-columns: 1fr 35px 35px;
 }
 
 #title {

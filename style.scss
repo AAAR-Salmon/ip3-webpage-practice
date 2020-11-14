@@ -20,11 +20,15 @@ body {
 	@extend #wrapper;
 	grid-column-gap: 5px;
 	grid-row-gap: 10px;
-	grid-template-columns: 1fr 35px 35px;
 
 	& p {
 		margin: 0;
 	}
+}
+
+#question-tf {
+	@extend #question;
+	grid-template-columns: 1fr 35px 35px;
 }
 
 #title {
