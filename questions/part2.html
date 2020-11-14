@@ -4,11 +4,32 @@
 		<meta charset="utf-8">
 		<title>大問2 - Webページ演習</title>
 		<link rel="stylesheet" type="text/css" href="../style.css">
+		<link rel="shortcut icon" href="../icon.png">
 		<script type="text/javascript" src="../script.js" async></script>
 	</head>
 	<body>
-		<script type="text/javascript">
-			document.write(localStorage.test);
-		</script>
+		<div id="question-ch">
+			<p id="title">
+				大問2 OSに関する次の記述を読み、空欄A, B, Cに適切な選択肢を当てはめよ。
+			</p>
+			<p>
+				OSは(A)管理の機能を備えており、アプリケーションの要求に応じて適切に(A)領域を確保する。64ビット版のOSでは64ビットの数値で(A)上の位置を示すことが多く、理論上は約(B)GBの(A)を利用できる。またOSは、マウス、キーボードやプリンタのようなデバイスをプログラムから簡単に操作するための(C)を提供する。
+			</p>
+			<p>A</p>
+			<div data-question="2-A" data-value="メモリ" class="radio">メモリ</div>
+			<div data-question="2-A" data-value="HID" class="radio">HID(ヒューマンインタフェースデバイス)</div>
+			<div data-question="2-A" data-value="ファイル" class="radio">ファイル</div>
+			<p>B</p>
+			<div data-question="2-B" data-value="4" class="radio">4</div>
+			<div data-question="2-B" data-value="192" class="radio">192</div>
+			<div data-question="2-B" data-value="約172億" class="radio">約172億</div>
+			<p>C</p>
+			<div data-question="3-C" data-value="API" class="radio">API</div>
+			<div data-question="3-C" data-value="CGI" class="radio">CGI</div>
+			<div data-question="3-C" data-value="GUI" class="radio">GUI</div>
+			<div id="next" class="link-button" data-href="./answer.html">
+				回答を終了する
+			</div>
+		</div>
 	</body>
 </html>
